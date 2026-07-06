@@ -1,16 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: testing
+  name: test-nginx
 spec:
   rules:
-  - host: testing.local
+  - host: test.local
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: testing
+            name: test-nginx
             port:
               number: 80
